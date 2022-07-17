@@ -1,0 +1,20 @@
+.about {
+  margin: 0 auto;
+  height: 88vh;
+  width: 50rem;
+  border: 1px solid #fff;
+  box-shadow: 10px 5px 30px 1px rgb(170, 167, 167);
+}
+
+.about .vision,
+.mission,
+.purpose {
+  padding: 2rem 4rem;
+  font-size: 1.5rem;
+}
+
+.about h1{
+    color: crimson;
+    font-weight: bold;
+    text-decoration: underline;
+}
