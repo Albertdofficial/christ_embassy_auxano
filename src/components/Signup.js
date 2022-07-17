@@ -11,6 +11,9 @@ export default function Signup({
   birthDate,
   email,
   date,
+  cell,
+  address,
+  hasDoneWaterBaptism,
   invitedBy
 }) {
   return (
@@ -63,6 +66,24 @@ export default function Signup({
           <label>
             <span>Date joined</span>
             <input type="date" ref={date} />
+          </label>
+        </div>
+        <div className="member-detail">
+          <label>
+            <span>cell</span>
+            <input type="text" ref={cell} required/>
+          </label>
+        </div>
+        <div className="member-detail">
+          <label>
+            <span>Home address </span>
+            <input type="text" ref={address} required/>
+          </label>
+        </div>
+        <div className="member-detail">
+          <label>
+            <span>Have you done water Baptism </span>
+            <input placeholder="yes/no" type="text" ref={hasDoneWaterBaptism} required/>
           </label>
         </div>
         <div className="member-detail">

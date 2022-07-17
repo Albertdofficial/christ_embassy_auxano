@@ -29,6 +29,9 @@ export default function App() {
   const email = useRef("");
   const date = useRef("");
   const invitedBy = useRef("");
+  const cell = useRef("")
+  const address = useRef("")
+  const hasDoneWaterBaptism = useRef("")
 
   // get data from firebase
   useEffect(() => {
@@ -61,6 +64,9 @@ export default function App() {
     email.current.value = "";
     date.current.value = "";
     invitedBy.current.value = "";
+    cell.current.value = ''
+    address.current.value = ''
+    hasDoneWaterBaptism.current.value = ''
   };
 
   const handleSubmit = async (e) => {
@@ -76,6 +82,9 @@ export default function App() {
       email: email.current.value,
       date: date.current.value,
       invitedBy: invitedBy.current.value,
+      cell:cell.current.value,
+      address:address.current.value,
+      hasDoneWaterBaptism:hasDoneWaterBaptism.current.value
     };
 
     //add a document to a firebase document
@@ -85,7 +94,7 @@ export default function App() {
       console.log(err);
     }
 
-    // resetForm();
+    resetForm();
 
     console.log(doc);
   };
@@ -110,6 +119,9 @@ export default function App() {
               email={email}
               date={date}
               invitedBy={invitedBy}
+              cell={cell}
+              address={address}
+              hasDoneWaterBaptism={hasDoneWaterBaptism}
             />
           </Route>
           <Route path="/about">
