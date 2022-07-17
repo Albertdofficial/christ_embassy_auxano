@@ -4,7 +4,7 @@ import './About.css'
 
 export default function About() {
   return (
-    <div className="about  min-h-screen md: max-w-4xl">
+    <div className="about  min-h-screen md:pr-8 pl-8 pt-4 max-w-4xl">
       <div className="vision">
         <h1>Our Vision</h1>
         <p>
@@ -14,7 +14,7 @@ export default function About() {
         </p>
       </div>
 
-      <div className="mission">
+      <div className="mission pt-10">
         <h1>Our Mission</h1>
         <p>
           To raise generations of men and women who will come into their
@@ -22,7 +22,7 @@ export default function About() {
         </p>
       </div>
 
-      <div className="purpose">
+      <div className="purpose pt-10">
         <h1>Our purpose</h1>
         <p> To make known and bring them into their inheritance.</p>
       </div>
