@@ -62,7 +62,7 @@ export default function Signup({
         <div className="member-detail">
           <label>
             <span>Date joined</span>
-            <input type="date" ref={date} required/>
+            <input type="date" ref={date} />
           </label>
         </div>
         <div className="member-detail">

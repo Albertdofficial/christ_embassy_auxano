@@ -1,14 +1,19 @@
 import React from "react";
 import { projectFirestore } from "./config";
 import { useState, useEffect, useRef } from "react";
-import { BrowserRouter as Router, Route, Switch, Redirect  } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
 import Members from "./Members";
 import Navbar from "./Navbar";
 import Projects from "./Projects";
 import Signup from "./Signup";
 import About from "./About";
 import Home from "../Home";
-import  MemberDetails from './MemeberDetails'
+import MemberDetails from "./MemeberDetails";
 
 import "../App.css";
 import Search from "./Search";
@@ -22,8 +27,8 @@ export default function App() {
   const birthDate = useRef("");
   const phoneNumber = useRef("");
   const email = useRef("");
-  const date = useRef('')
-  const invitedBy = useRef('')
+  const date = useRef("");
+  const invitedBy = useRef("");
 
   // get data from firebase
   useEffect(() => {
@@ -54,8 +59,8 @@ export default function App() {
     birthDate.current.value = "";
     phoneNumber.current.value = "";
     email.current.value = "";
-    date.current.value = '';
-    invitedBy.current.value = '';
+    date.current.value = "";
+    invitedBy.current.value = "";
   };
 
   const handleSubmit = async (e) => {
@@ -69,8 +74,8 @@ export default function App() {
       birthDate: birthDate.current.value,
       phoneNumber: phoneNumber.current.value,
       email: email.current.value,
-      date:date.current.value,
-      invitedBy:invitedBy.current.value 
+      date: date.current.value,
+      invitedBy: invitedBy.current.value,
     };
 
     //add a document to a firebase document
@@ -80,12 +85,10 @@ export default function App() {
       console.log(err);
     }
 
-    resetForm();
+    // resetForm();
 
     console.log(doc);
   };
-
-  
 
   return (
     <div className="App">
@@ -121,11 +124,11 @@ export default function App() {
           <Route path="/memberdetails/:id">
             <MemberDetails data={data} />
           </Route>
-          <Route path='/search'>
-            <Search/>
+          <Route path="/search">
+            <Search />
           </Route>
-          <Route path="*" >
-            <Redirect to="/"/>
+          <Route path="*">
+            <Redirect to="/" />
           </Route>
         </Switch>
       </Router>

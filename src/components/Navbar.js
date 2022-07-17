@@ -16,8 +16,8 @@ export default function Navbar() {
     <div className="navbar">
       <nav className="md:flex justify-between ">
         <ul>
-          <Link to="/" className="brand">
-            <h2 className="pl-4 text-4xl text-orange-700">Christ Embassy Auxano</h2>
+          <Link to="/members" className="brand">
+            <h2 className="pl-4 text-2xl text-orange-700">Christ Embassy Auxano</h2>
           </Link>
         </ul>
 
@@ -39,7 +39,7 @@ export default function Navbar() {
         </div>
 
         {/* <SearchBar /> */}
-        <ul className="menu hidden md:flex" ref={menu}>
+        <ul className="menu text-2xl hidden md:flex" ref={menu}>
           <li className="px-2">
             <Link to="/members">members</Link>
           </li>
