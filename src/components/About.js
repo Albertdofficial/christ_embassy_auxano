@@ -4,7 +4,7 @@ import './About.css'
 
 export default function About() {
   return (
-    <div className="about">
+    <div className="about  min-h-screen md: max-w-4xl">
       <div className="vision">
         <h1>Our Vision</h1>
         <p>

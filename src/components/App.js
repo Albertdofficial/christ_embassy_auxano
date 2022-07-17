@@ -105,7 +105,7 @@ export default function App() {
         <Navbar />
         <Switch>
           <Route exact path="/">
-            <Home />
+            <About />
           </Route>
           <Route path="/signup">
             <Signup
