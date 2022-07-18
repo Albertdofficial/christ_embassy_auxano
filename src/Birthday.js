@@ -6,7 +6,7 @@ import "./Birthday.css";
 
 export default function Birthday({ data }) {
   const [celebrants, setCelebrants] = useState([]);
-  let currentMonth = new Date().getMonth();
+  let currentMonth = new Date().getMonth() + 1;
 
   useEffect(() => {
     let str,
