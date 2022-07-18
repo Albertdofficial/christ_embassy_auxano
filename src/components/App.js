@@ -16,7 +16,7 @@ import Home from "../Home";
 import MemberDetails from "./MemeberDetails";
 
 import "../App.css";
-import Search from "./Search";
+import Birthday from "../Birthday";
 
 export default function App() {
   const [data, setData] = useState(null);
@@ -29,9 +29,9 @@ export default function App() {
   const email = useRef("");
   const date = useRef("");
   const invitedBy = useRef("");
-  const cell = useRef("")
-  const address = useRef("")
-  const hasDoneWaterBaptism = useRef("")
+  const cell = useRef("");
+  const address = useRef("");
+  const hasDoneWaterBaptism = useRef("");
 
   // get data from firebase
   useEffect(() => {
@@ -65,9 +65,9 @@ export default function App() {
     email.current.value = "";
     date.current.value = "";
     invitedBy.current.value = "";
-    cell.current.value = ''
-    address.current.value = ''
-    hasDoneWaterBaptism.current.value = ''
+    cell.current.value = "";
+    address.current.value = "";
+    hasDoneWaterBaptism.current.value = "";
   };
 
   const handleSubmit = async (e) => {
@@ -83,9 +83,9 @@ export default function App() {
       email: email.current.value,
       date: date.current.value,
       invitedBy: invitedBy.current.value,
-      cell:cell.current.value,
-      address:address.current.value,
-      hasDoneWaterBaptism:hasDoneWaterBaptism.current.value
+      cell: cell.current.value,
+      address: address.current.value,
+      hasDoneWaterBaptism: hasDoneWaterBaptism.current.value,
     };
 
     //add a document to a firebase document
@@ -104,6 +104,7 @@ export default function App() {
     <div className="App">
       <Router>
         <Navbar />
+
         <Switch>
           <Route exact path="/">
             <About />
@@ -128,17 +129,14 @@ export default function App() {
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/projects">
-            <Projects />
+          <Route path="/birthdays">
+            <Birthday data={data} />
           </Route>
           <Route path="/members">
             <Members data={data} />
           </Route>
           <Route path="/memberdetails/:id">
             <MemberDetails data={data} />
-          </Route>
-          <Route path="/search">
-            <Search />
           </Route>
           <Route path="*">
             <Redirect to="/" />

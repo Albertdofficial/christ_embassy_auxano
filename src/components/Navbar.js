@@ -1,7 +1,6 @@
 import React from "react";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
-import SearchBar from "./SearchBar";
 
 import "./Navbar.css";
 
@@ -16,7 +15,7 @@ export default function Navbar() {
     <div className="navbar">
       <nav className="md:flex justify-between ">
         <ul>
-          <Link to="/members" className="brand">
+          <Link to="/" className="brand">
             <h2 className="pl-4 text-2xl text-orange-700">Christ Embassy Auxano</h2>
           </Link>
         </ul>
@@ -50,7 +49,7 @@ export default function Navbar() {
             <Link to="/about">about</Link>
           </li>
           <li className="px-2">
-            <Link to="/projects">projects</Link>
+            <Link to="/birthdays">birthdays</Link>
           </li>
         </ul>
       </nav>
