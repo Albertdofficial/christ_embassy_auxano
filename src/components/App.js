@@ -1,4 +1,5 @@
 import React from "react";
+
 import { projectFirestore } from "./config";
 import { useState, useEffect, useRef } from "react";
 import {
@@ -20,6 +21,7 @@ import Birthday from "../Birthday";
 
 export default function App() {
   const [data, setData] = useState(null);
+
   const firstName = useRef("");
   const middleName = useRef("");
   const lastName = useRef("");
@@ -96,8 +98,6 @@ export default function App() {
     }
 
     resetForm();
-
-    console.log(doc);
   };
 
   return (

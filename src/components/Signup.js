@@ -1,5 +1,8 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
+
 import "./Signup.css";
+
 
 export default function Signup({
   handleSubmit,
@@ -16,6 +19,12 @@ export default function Signup({
   hasDoneWaterBaptism,
   invitedBy
 }) {
+  const history = useHistory();
+
+  const handleClick = () => {
+    history.push("/members");
+  }
+ 
   return (
     <div className="input-form">
       <form onSubmit={handleSubmit}>
@@ -93,7 +102,7 @@ export default function Signup({
           </label>
         </div>
 
-        <button>Submit</button>
+        <button onClick={handleClick} >Submit</button>
       </form>
     </div>
   );
