@@ -14,7 +14,6 @@ export default function Birthday({ data }) {
     let month = "";
     let results = [];
 
-    console.log("currentMonth", currentMonth);
     data &&
       data.forEach((member) => {
         str = member.birthDate;
@@ -22,11 +21,9 @@ export default function Birthday({ data }) {
         if (month == currentMonth) {
           name = `${member.firstName} ${member.lastName} `;
           results.push(name);
-          console.log(results);
         }
       });
     setCelebrants(results);
-    console.log(celebrants);
   }, [data]);
 
   return (

@@ -2,6 +2,10 @@
   background: #4a156b;
   padding: 20px;
   color: #fff;
+  /* position: fixed; */
+  /* top: 0;
+  right: 0;
+  width: 100%; */
 }
 
 .navbar a {
