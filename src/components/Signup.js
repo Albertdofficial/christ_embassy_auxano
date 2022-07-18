@@ -46,8 +46,8 @@ export default function Signup({
 
         <div className="member-detail">
           <label>
-            <span>Birthdate</span>
-            <input type="date" ref={birthDate} required />
+            <span>Birth date</span>
+            <input placeholder="day/month/year" type="text" ref={birthDate} required />
           </label>
         </div>
         <div className="member-detail">
@@ -65,7 +65,7 @@ export default function Signup({
         <div className="member-detail">
           <label>
             <span>Date joined</span>
-            <input type="date" ref={date} />
+            <input placeholder="day/month/year" type="text" ref={date} />
           </label>
         </div>
         <div className="member-detail">

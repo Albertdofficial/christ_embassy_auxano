@@ -53,6 +53,7 @@ export default function App() {
         console.log(error);
       });
   }, []);
+  console.log(data);
 
   const resetForm = () => {
     title.current.value = "";
