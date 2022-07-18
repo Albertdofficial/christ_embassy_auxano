@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/christ_embassy_auxano/static/css/main.f60d7365.css",
-    "main.js": "/christ_embassy_auxano/static/js/main.3ae997b8.js",
+    "main.js": "/christ_embassy_auxano/static/js/main.7ed8b15a.js",
     "index.html": "/christ_embassy_auxano/index.html",
     "main.f60d7365.css.map": "/christ_embassy_auxano/static/css/main.f60d7365.css.map",
-    "main.3ae997b8.js.map": "/christ_embassy_auxano/static/js/main.3ae997b8.js.map"
+    "main.7ed8b15a.js.map": "/christ_embassy_auxano/static/js/main.7ed8b15a.js.map"
   },
   "entrypoints": [
     "static/css/main.f60d7365.css",
-    "static/js/main.3ae997b8.js"
+    "static/js/main.7ed8b15a.js"
   ]
 }
