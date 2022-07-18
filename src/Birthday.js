@@ -2,12 +2,12 @@ import React from "react";
 import { useEffect, useState } from "react";
 
 // styles
-import './Birthday.css'
+import "./Birthday.css";
 
 export default function Birthday({ data }) {
+  const [celebrants, setCelebrants] = useState([]);
   let currentMonth = new Date().getMonth();
 
-  const [celebrants, setCelebrants] = useState([]);
   useEffect(() => {
     let str,
       name = "";
