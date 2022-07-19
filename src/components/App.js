@@ -21,6 +21,7 @@ import Birthday from "../Birthday";
 
 export default function App() {
   const [data, setData] = useState(null);
+  // const [error, setError] = useState('')
 
   const firstName = useRef("");
   const middleName = useRef("");
@@ -37,10 +38,9 @@ export default function App() {
 
   // get data from firebase
   useEffect(() => {
-    projectFirestore
+    const unsub = projectFirestore
       .collection("member")
-      .get()
-      .then((snapshot) => {
+      .onSnapshot((snapshot) => {
         if (snapshot.empty) {
           console.log("No recipes to load");
         } else {
@@ -50,10 +50,12 @@ export default function App() {
           });
           setData(results);
         }
+      }, (err) => {
+        console.log(err.message);
       })
-      .catch((error) => {
-        console.log(error);
-      });
+
+      return () => unsub()
+      
   }, []);
 
   const resetForm = () => {

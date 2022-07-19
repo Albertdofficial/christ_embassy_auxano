@@ -1,9 +1,9 @@
 .birthday {
-  font-size: 2rem;
   margin: 0 2rem;
 }
 .birthday .celebrant {
-  padding: .5rem 1rem;
+  font-size: 1.5rem;
+  padding: 0.5rem 2rem;
   margin: 1rem auto;
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
   width: 100%;
@@ -12,21 +12,19 @@
 }
 
 .birthday p {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-top: 2rem;
   color: #e41749;
   font-weight: 700;
 }
 
-@media screen  and (max-width: 780px){
-    .birthday p{
-        font-size: 1.5rem;
-        line-height: 2.25rem;
-    }
+@media screen and (max-width: 780px) {
+  .birthday p {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+  }
 
-    .birthday .celebrant{
-        font-size: 1.5rem;
-        margin-left: 1rem;
-    }
-
+  .birthday .celebrant {
+    margin-left: 1rem;
+  }
 }
