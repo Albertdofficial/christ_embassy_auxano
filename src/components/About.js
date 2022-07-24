@@ -24,7 +24,7 @@ export default function About() {
 
       <div className="purpose pt-10 mx-4">
         <h1>Our purpose</h1>
-        <p> To make known and bring them into their inheritance.</p>
+        <p> To make known and bring men into their inheritance.</p>
       </div>
     </div>
   );
